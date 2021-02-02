@@ -8,10 +8,10 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <ListBox x:Name="Songlist" HorizontalAlignment="Left" Height="310" Margin="577,10,0,0" VerticalAlignment="Top" Width="205"/>
-        <Button x:Name="Openfilesbutton" Content="Open Files" HorizontalAlignment="Left" Margin="577,341,0,0" VerticalAlignment="Top" Width="205" Height="41"/>
+        <Button x:Name="Openfilesbutton" Content="Open Files" HorizontalAlignment="Left" Margin="577,341,0,0" VerticalAlignment="Top" Width="205" Height="41" Click="Openfilesbutton_Click"/>
         <Button x:Name="Previousbutton" Content="Prev" HorizontalAlignment="Left" Margin="34,53,0,0" VerticalAlignment="Top" Width="75"/>
         <Button x:Name="Stop_button" Content="Stop" HorizontalAlignment="Left" Margin="129,53,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button x:Name="Playbutton" Content="Play" HorizontalAlignment="Left" Margin="223,53,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="Playbutton" Content="Play" HorizontalAlignment="Left" Margin="223,53,0,0" VerticalAlignment="Top" Width="75" Click="Playbutton_Click"/>
         <Button x:Name="Nextbutton" Content="Next" HorizontalAlignment="Left" Margin="419,53,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="3.966,0.499"/>
         <Button x:Name="Pausebutton" Content="Pause" HorizontalAlignment="Left" Margin="317,53,0,0" VerticalAlignment="Top" Width="75"/>
         <Slider x:Name="Trackingslider" HorizontalAlignment="Left" Margin="34,341,0,0" VerticalAlignment="Top" Width="495" Maximum="100"/>

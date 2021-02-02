@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,31 @@ namespace Musicplayer
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        String[] path, files;
+
+        private void Playbutton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Openfilesbutton_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog megnyitas = new OpenFileDialog();
+
+            megnyitas.Multiselect = true;
+            if ((bool)megnyitas.ShowDialog())
+            {
+                files = megnyitas.SafeFileNames;
+                path = megnyitas.FileNames;
+
+                for (int i = 0; i < files.Length; i++)
+                {
+                    Songlist.Items.Add(files[i]);
+                }
+            }
+           
         }
     }
 }
