@@ -46,6 +46,13 @@ namespace Musicplayer
         private void Pausebutton_Click(object sender, RoutedEventArgs e)
         {
             player.Pause();
+            
+        }
+
+        private void Soundslider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            
+                player.Volume = e.NewValue; 
         }
 
         private void Openfilesbutton_Click(object sender, RoutedEventArgs e)

@@ -15,7 +15,7 @@
         <Button x:Name="Nextbutton" Content="Next" HorizontalAlignment="Left" Margin="419,53,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="3.966,0.499"/>
         <Button x:Name="Pausebutton" Content="Pause" HorizontalAlignment="Left" Margin="317,53,0,0" VerticalAlignment="Top" Width="75" Click="Pausebutton_Click"/>
         <Slider x:Name="Trackingslider" HorizontalAlignment="Left" Margin="34,341,0,0" VerticalAlignment="Top" Width="495" Maximum="100"/>
-        <Slider x:Name="Soundslider" HorizontalAlignment="Left" Margin="444,181,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Width="146" Maximum="100">
+        <Slider x:Name="Soundslider" HorizontalAlignment="Left" Margin="444,181,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Width="146" Maximum="100" ValueChanged="Soundslider_ValueChanged">
             <Slider.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
