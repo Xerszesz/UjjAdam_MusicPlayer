@@ -30,7 +30,22 @@ namespace Musicplayer
 
         private void Playbutton_Click(object sender, RoutedEventArgs e)
         {
+            player.Open(new Uri((string)Songlist.SelectedItem));
+            player.Play();
 
+            
+        }
+
+        MediaPlayer player = new MediaPlayer();
+
+        private void Songlist_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void Pausebutton_Click(object sender, RoutedEventArgs e)
+        {
+            player.Pause();
         }
 
         private void Openfilesbutton_Click(object sender, RoutedEventArgs e)
@@ -45,7 +60,7 @@ namespace Musicplayer
 
                 for (int i = 0; i < files.Length; i++)
                 {
-                    Songlist.Items.Add(files[i]);
+                    Songlist.Items.Add(path[i]);
                 }
             }
            
