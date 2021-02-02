@@ -30,17 +30,14 @@ namespace Musicplayer
 
         private void Playbutton_Click(object sender, RoutedEventArgs e)
         {
-            player.Open(new Uri((string)Songlist.SelectedItem));
             player.Play();
-
-            
         }
 
         MediaPlayer player = new MediaPlayer();
 
         private void Songlist_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            player.Open(new Uri((string)Songlist.SelectedItem));
         }
 
         private void Pausebutton_Click(object sender, RoutedEventArgs e)
@@ -53,6 +50,16 @@ namespace Musicplayer
         {
             
                 player.Volume = e.NewValue; 
+        }
+
+        private void Stop_button_Click(object sender, RoutedEventArgs e)
+        {
+            player.Stop();
+        }
+
+        private void Nextbutton_Click(object sender, RoutedEventArgs e)
+        {
+            Songlist.SelectedIndex += 1;
         }
 
         private void Openfilesbutton_Click(object sender, RoutedEventArgs e)
