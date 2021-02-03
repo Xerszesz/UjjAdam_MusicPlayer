@@ -62,6 +62,16 @@ namespace Musicplayer
             Songlist.SelectedIndex += 1;
         }
 
+        private void Previousbutton_Click(object sender, RoutedEventArgs e)
+        {
+            Songlist.SelectedIndex -= 1;
+        }
+
+        private void Trackingslider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            player.Position = TimeSpan.FromMilliseconds(e.NewValue);
+        }
+
         private void Openfilesbutton_Click(object sender, RoutedEventArgs e)
         {
             OpenFileDialog megnyitas = new OpenFileDialog();
