@@ -31,6 +31,22 @@ namespace Musicplayer
         private void Playbutton_Click(object sender, RoutedEventArgs e)
         {
             player.Play();
+            if (Soundslider.Value==0)
+            {
+                player.Volume = 0;
+            }
+
+            try
+            {
+                player.Play();
+            }
+            catch (Exception hibakod)
+            {
+                string message = hibakod.Message;
+
+                MessageBox.Show(message, "Hiba", MessageBoxButton.OK, MessageBoxImage.Error);
+
+            }
         }
 
         MediaPlayer player = new MediaPlayer();
